@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta charset="viewport" content="width=device-width">
+        <title>Inicia Sesión</title>
+        <link rel="stylesheet" href="Styles/reset.css">
+        <link rel="stylesheet" href="Styles/Content2.css">
+        <link rel="stylesheet" href="Styles/background.css">
+        <link rel="stylesheet" href="Styles/menu.css">
+        <link rel="shortcut icon" href="imagenes/Ojo_Blanco.png"> 
+        
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1 class="img"><img src="imagenes/Barco_corregido.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="checkIn.html">Registrarse</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="context">
+            <form class="form" method="POST">
+                <h2>¿Ya Formas parte de UNITEAMS?</h2>
+                <div class="input-group">
+                    <input type="text" id="correo" class="input" required="" autocomplete="off">
+                        <label class="user-label">Correo</label>
+                </div>       
+                <div class="input-group">
+                    <input type="password" id="password" class="input" required="" autocomplete="off">
+                        <label  class="user-label">Password</label>
+                </div>
+                <div>
+                    <button type="button" id="btnLogin" value="Iniciar" class="Enviar">Iniciar sesión</button>
+                </div>
+            </form>
+        </div>
+        <footer >
+            <div class="footer">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+                    <ul>
+                    <li>
+                        <a href="#">
+                        <i class="fab fa-facebook-f icon"></i>    </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+                    <li>
+                        <a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+                    </ul>
+                </div>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                $("#btnLogin").click(function() {
+                    let usuario=regresarUsuario();
+                    loginUsuario(usuario);
+                });
+                function regresarUsuario() {
+                    let usuario={
+                        correo: $('#correo').val(),
+                        password: $('#password').val()
+                    };
+                    return usuario
+                }
+                function loginUsuario(usuario) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'login.php',
+                        data: usuario,
+                        success: function (respuesta) {
+                            if (respuesta=='Correcta') {
+                                window.location ='dashboard.php';
+                            }else{
+                                alert("Usuario o contraseña erróneos");
+                            }
+                        },error: function() {
+                            alert("Hubo un error");
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+.footer {
+    margin: 35vh auto 15vh auto;
+    position: relative;
+    width: 40%;
+    text-align: center;
+    justify-items: center;
+}
+
+.star_content {
+    margin: 2vh auto 2vh 17vh;
+    width: 50%;
+    text-align: center;
+}
+
+.star a {
+    display: block;
+    width: 50%;
+    background-position: 0 0;
+}
+
+.star {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    font-size: 34px;
+    font-weight: normal;
+}
+
+.star a {
+    display: block;
+    position: relative;
+    text-indent: -5000px;
+}
+
+div.star:after {
+    content: "\f006";
+    font-family: "FontAwesome";
+    display: inline-block;
+    color: #777676;
+}
+
+div.star.star_on {
+    display: block;
+}
+
+div.star.star_on:after {
+    content: "\f005";
+    font-family: "FontAwesome";
+    display: inline-block;
+    color: #ef8743;
+}
+
+div.star.star_hover:after {
+    content: "\f005";
+    font-family: "FontAwesome";
+    display: inline-block;
+    color: #ef8743;
+}
+
+#btn-Enviar{
+    margin: 5vh 5.5vh 5vh auto;
+    width: 30%;
+    height: 5%;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #cf1313; 
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#text{
+    text-align: center;
+}

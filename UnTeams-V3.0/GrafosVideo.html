@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Content2.css">
+    <link rel="stylesheet" href="Styles/reset.css">
+    <link rel="stylesheet" href="Styles/StyleM_V.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Grafos-Video</title>
+</head>
+<body>
+    <header>
+         <div class="area"></div><nav class="main-menu">
+    <section class="dataC">
+        <ul>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa_laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Curso
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa_laptop fa-2x"></i>
+                    <img src="imagenes/Barco_corregido.png" alt="">
+                    <progress bar value="25" max="100"></progress bar>
+                </a>
+            </li>
+        </ul>
+
+    </section>
+            <ul>
+                <li class="has-subnav">
+                    <a href="dashboard.php">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                  
+                </li>
+               
+            </ul>
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+            </nav>
+    </header>
+    <script>
+        function change(){
+            window.location.assign("GrafosCuest.php");
+        }
+    </script>
+    <main>
+        <section class="Botton" onclick="change();">
+            <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <span class="button-text"></span>
+              </button>
+        </section>
+        <section class="video">
+            <iframe width="490" height="392" src="https://www.youtube.com/embed/tQqELEQOSys" title="colas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        <section class="Descripcion">
+            <div class="textarea">
+                <p class="Descrip">En este video trataremos un tipo de dato llamado Grafos; se estará programando en lenguaje Python junto con la IDE de Visual Studio<br>Recuerda poner atención para responder correctamente el cuestionario y recibir tu medalla en reconocimiento del término del curso. Éxito </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

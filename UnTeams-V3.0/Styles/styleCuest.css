@@ -1,0 +1,51 @@
+body{
+        font-family: 'Exo', sans-serif;
+        width: 100%;
+}
+
+.title{
+    margin: 15vh auto auto auto
+}
+
+form{
+    margin: 3vh auto 3vh auto;
+}
+
+
+.cuest{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 25vh;
+    height: 25vh;
+
+}
+.cuest tr{
+    float: left;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 2vh auto 2vh auto;
+    border-radius: 2vh;
+}
+.cuest .opcion{
+    font-size: 5vh;
+    background-color: #52c463;
+    margin: 5vh 5vh 5vh 5vh;
+    border-radius: 15%;
+    position: relative;
+}
+
+.cuest .answer{
+    margin: auto 35vh auto 5vh;
+    height: 5vh;
+    position: relative;
+    text-align: center;
+}
+tr:hover{
+    background: #86c28f;
+    transition: 1s;
+    cursor: pointer;
+    transform: scale(1.2);
+    font-weight: bold;
+}
